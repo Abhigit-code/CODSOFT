@@ -1,0 +1,41 @@
+import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main{
+    public static void main(String args[]){
+    //to generate random number
+    Random num = new Random();
+    int num_1 = num.nextInt(100);
+    Scanner sc = new Scanner(System.in);
+    int chances = 0;
+    int score = 0;
+    System.out.println("You have only 3 chances to win.");
+    for(int i =0 ; i<3;i++){
+        System.out.println("Enter your input between 1-100");
+        int a = sc.nextInt();
+        chances++;
+        
+        if(a>100){
+            System.out.println("Input exceeds the random number limit.");
+            continue;
+        }
+        else if(a==num_1){
+            System.out.println("You scored a point");
+            score++;
+            break;
+        }
+        else if(a>num_1){
+            System.out.println("Your input has larger value than random number");
+        }else{
+            System.out.println("Your input has larger value than the random number.");
+        }
+        
+        if(score==3){
+          System.out.println("Sorry you better luck next time."); 
+        }
+        
+    }
+        System.out.println("Your score is"+score);
+    }
+}

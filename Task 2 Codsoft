@@ -1,0 +1,49 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        //program for average %
+        System.out.println("Enter the marks obtained in:-");
+        System.out.println("Maths :");
+        double m = sc.nextDouble();
+        System.out.println("Physics :");
+        double p = sc.nextDouble();
+        System.out.println("Chemistry :");
+        double c = sc.nextDouble();
+        System.out.println("Hindi :");
+        double h = sc.nextDouble();
+        System.out.println("English :");
+        double e = sc.nextDouble();
+       
+        double sum = m+p+c+h+e;
+        
+        double avg = (sum/500)*100;
+        System.out.println("Total marks obtained :"+sum);
+        System.out.println("Average :"+avg+"%");
+        System.out.println("Your Garde is :");
+        if(sum>=480){
+            System.out.println("A+");
+        }
+        else if(sum>=450){
+            System.out.println("A");
+        }
+        else if(sum>=400){
+            System.out.println("B+");
+        }
+        else if(sum>=350){
+            System.out.println("B");
+        }
+        else if(sum>=300){
+            System.out.println("C+");
+        }
+        else if(sum>=250){
+            System.out.println("C");
+        }
+        else{
+            System.out.println("F");
+        }
+
+    }
+}
